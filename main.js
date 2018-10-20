@@ -7,7 +7,7 @@ Vue.component('fruits-list-description',{
 Vue.component('fruits-item',{
 	props:{
 		fruitsName:{
-			type:Object,
+			type:String,
 			required:true
 		}
 	},
