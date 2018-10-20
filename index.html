@@ -8,9 +8,7 @@
 <div id="app">
 	<fruits-list-title></fruits-list-title>
 	<fruits-list-description></fruits-list-description>
-	<ul>
-<fruits-list-item v-for="fruit in fruits" :key="fruits.name" :fruits-list="fruit"></fruits-list-item>
-	</ul>
+    <fruits-item v-bind:fruits-name='fruit'></fruits-item>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 <script src="main.js"></script>	

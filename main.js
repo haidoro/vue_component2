@@ -4,18 +4,16 @@ Vue.component('fruits-list-title',{
 Vue.component('fruits-list-description',{
 	template:'<p>季節の代表的なフルーツの一覧です。</p>'
 })
-Vue.component('fruits-list-item',{
+Vue.component('fruits-item',{
 	props:{
-		fruitsList:{
+		fruitsName:{
 			type:Object,
 			required:true
 		}
 	},
-	template:'<li>{{ fruitsList.name }}</li>'
+	template:'<p>{{ fruitsName }}</p>'
 })
 var app = new Vue({
 	el:'#app',
-	data:{
-		fruits : [{name:'りんご'},{name:'みかん'},{name:'梨'}]
-	}
+	data:{fruit:'りんご'}
 })
