@@ -13,9 +13,29 @@ Vue.component('best-food-item', {
 	},
 	template: '<li>{{ foodName.name }}</li>'
 })
+
+var counterButton = Vue.extend({
+    template:'<div><h2>Add Number</h2><button v-on:click="addToNumber">Add Number</button></div>',
+    data:function(){
+        return{
+            counter:0
+        }
+    },
+    methods:{
+        addToNumber: function(){
+            this.counter += 1
+            this.$emit('increment')
+        }
+    }
+})
+
 var app = new Vue({
-	el:'#app',
+    el:'#app',
+    components:{
+        'counter-button':counterButton
+    },
 	data:{
+        total:0,
 		foods: [{
 		    name: 'ロボット用赤まむしドリンク'
 		}, {
@@ -23,5 +43,10 @@ var app = new Vue({
 		}, {
 		    name: 'ロボット用六法焼うぐいすあん'
 		}]
-	}
+    },
+    methods:{
+        incrementStatus:function(){
+            this.total += 1
+        }
+    }
 })

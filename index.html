@@ -11,7 +11,10 @@
 	<ul>
 <best-food-item v-for="food in foods" :key="foods.name" :food-name="food">
 </best-food-item>
-	</ul>
+    </ul>
+    
+    <counter-button v-on:increment="incrementStatus()"></counter-button>
+    <p>Total:{{total}}</p>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 <script src="main.js"></script>	
