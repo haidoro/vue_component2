@@ -6,10 +6,11 @@
 </head>
 <body>
 <div id="app">
-	<fruits-list-title></fruits-list-title>
-	<fruits-list-description></fruits-list-description>
+    <best-food-title></best-food-title>
+    <best-food-description></best-food-description>
 	<ul>
-<fruits-list-item v-for="fruit in fruits" :key="fruits.name" :fruits-list="fruit"></fruits-list-item>
+<best-food-item v-for="food in foods" :key="foods.name" :food-name="food">
+</best-food-item>
 	</ul>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
