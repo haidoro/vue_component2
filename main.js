@@ -1,19 +1,21 @@
-Vue.component('fruits-list-title',{
-	template:'<h1>フルーツ一覧</h1>'
+Vue.component('best-food-title', {
+	template: '<h1>好きな食べ物</h1>'
 })
-Vue.component('fruits-list-description',{
-	template:'<p>季節の代表的なフルーツの一覧です。</p>'
+Vue.component('best-food-description', {
+	template: '<p>DogRoboの好きな食べ物の紹介です。</p>'
 })
-Vue.component('fruits-item',{
+Vue.component('best-food', {
 	props:{
-		fruitsName:{
+		foodName:{
 			type:String,
 			required:true
 		}
 	},
-	template:'<p>{{ fruitsName }}</p>'
+	template:'<p>{{ foodName }}</p>'
 })
 var app = new Vue({
 	el:'#app',
-	data:{fruit:'りんご'}
+	data: {
+	    name: 'ロボット用RedBull'
+	}
 })
