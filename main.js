@@ -4,7 +4,7 @@ Vue.component('best-food-title', {
 Vue.component('best-food-description', {
 	template: '<p>DogRoboの好きな食べ物の紹介です。</p>'
 })
-Vue.component('best-food', {
+Vue.component('best-food-item', {
 	props:{
 		foodName:{
 			type:String,
@@ -16,6 +16,6 @@ Vue.component('best-food', {
 var app = new Vue({
 	el:'#app',
 	data: {
-	    name: 'ロボット用RedBull'
+	    name: 'ロボット用赤まむしドリンク'
 	}
 })
